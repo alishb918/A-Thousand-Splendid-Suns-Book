@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        meta charset="utf-8" />
+        <mrta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>A Thousand Splendid Suns- Reading Circle</title>
+        <meta name="description" content="A responsive HTML + CSS mini-site themed around the novel A Thousand Splendid Suns.">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <input type="checkbox" id=""themeTogglee" class="visually-hidden" aria-label="Toggle dark theme">
+        <div class="site">
+<header class="site-header">
+<div class="brand">
+<img src="assets/sun.svg" alt="" width="32" height="32" aria-hidden="true">
+<span class="brand-name">A Thousand Splendid Suns</span>
+</div>
+
+<!-- Mobile menu (CSS-only) -->
+<input type="checkbox" id="navToggle" class="visually-hidden" aria-label="Toggle navigation">
+<label for="navToggle" class="hamburger" aria-hidden="true"><span></span><span></span><span></span></label>
+
+<nav class="site-nav" aria-label="Primary">
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#themes">Themes</a></li>
+<li><a href="#faq">FAQ</a></li>
+<li><a href="#join">Join</a></li>
+</ul>
+</nav>
+
+<label class="theme-toggle" for="themeToggle"><span aria-hidden="true">🌙</span><span class="sr-only">Toggle theme</span></label>
+</header>
+
+<main class="site-main">
+<!-- HERO -->
+<section class="hero" aria-labelledby="hero-title">
+<article>
+<h1 id="hero-title">Stories of resilience, love, and hope.</h1>
+<p>Welcome to our reading circle for <em>A Thousand Splendid Suns</em> — a novel about courage and friendship set in Afghanistan.</p>
+<a class="btn" href="#join">Join the Reading Circle</a>
+</article>
+<figure class="hero-media">
+<img src="assets/cover.jpg" alt="Abstract golden sun over Kabul skyline">
+</figure>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="about" aria-labelledby="about-title">
+<h2 id="about-title">About this mini-site</h2>
+<div class="feature-grid">
+<article class="card">
+<h3>Setting</h3>
+<p>Kabul and beyond — a backdrop of conflict where everyday bravery shines.</p>
+</article>
+<article class="card">
+<h3>Friendship</h3>
+<p>Two women, unlikely allies, finding family in each other.</p>
+</article>
+<article class="card">
+<h3>Resilience</h3>
+<p>Enduring hardship, sustaining hope, and choosing compassion.</p>
+</article>
+<article class="card">
+<h3>Hope</h3>
+<p>Even in darkness, the promise of a new morning.</p>
+</article>
+</div>
+</section>
+
+<!-- THEMES: CSS-only radio tabs (Interactive #1) -->
+<section id="themes" class="pricing" aria-labelledby="themes-title">
+<h2 id="themes-title">Major Themes</h2>
+
+<div class="tabs" role="tablist" aria-label="Themes">
+<input type="radio" name="t" id="tab-gender" class="visually-hidden" checked>
+<label role="tab" aria-controls="panel-gender" for="tab-gender" tabindex="0">Gender & Power</label>
+
+<input type="radio" name="t" id="tab-war" class="visually-hidden">
+<label role="tab" aria-controls="panel-war" for="tab-war" tabindex="0">War & Survival</label>
+
+<input type="radio" name="t" id="tab-family" class="visually-hidden">
+<label role="tab" aria-controls="panel-family" for="tab-family" tabindex="0">Family & Motherhood</label>
+
+<div id="panel-gender" class="tab-panel" role="tabpanel" aria-labelledby="tab-gender">
+<article class="price-card">
+<h3>Gender & Power</h3>
+<ul>
+<li>Patriarchal control vs. personal agency</li>
+<li>Constraints, resistance, quiet defiance</li>
+<li>Small choices that reshape lives</li>
+</ul>
+</article>
+</div>
+
+<div id="panel-war" class="tab-panel" role="tabpanel" aria-labelledby="tab-war">
+<article class="price-card">
+<h3>War & Survival</h3>
+<ul>
+<li>Violence, displacement, and uncertainty</li>
+<li>Daily acts of care as survival</li>
+<li>Community support under pressure</li>
+</ul>
+</article>
+</div>
+
+<div id="panel-family" class="tab-panel" role="tabpanel" aria-labelledby="tab-family">
+<article class="price-card">
+<h3>Family & Motherhood</h3>
+<ul>
+<li>Chosen family and solidarity</li>
+<li>Protection, sacrifice, legacy</li>
+<li>Love as a renewable force</li>
+</ul>
+</article>
+</div>
+</div>
+</section>
+
+<!-- FAQ: details/summary (Interactive #2) -->
+<section id="faq" class="faq" aria-labelledby="faq-title">
+<h2 id="faq-title">FAQ</h2>
+<details>
+<summary>Can I join if I’m new to literary analysis?</summary>
+<p>Yes! We keep things friendly and simple — summaries, themes, and gentle discussion.</p>
+</details>
+<details>
+<summary>Will there be spoilers?</summary>
+<p>We use spoiler warnings. Early sessions cover context and non-spoiler themes first.</p>
+</details>
+<details>
+<summary>Can I share quotes?</summary>
+<p>Use short excerpts (brief lines only) and always credit the author and publisher.</p>
+</details>
+</section>
+
+<!-- SMART FORM: Book Club Signup (Interactive #3) -->
+<section id="join" class="form-wrap" aria-labelledby="form-title">
+<h2 id="form-title">Join the Reading Circle</h2>
+<form action="#thanks" method="get" novalidate aria-describedby="form-help">
+<p id="form-help">Fields marked * are required.</p>
+
+<div class="form-grid">
+<div class="field">
+<label for="name">Full Name *</label>
+<input id="name" name="name" type="text" required minlength="2" autocomplete="name">
+</div>
+
+<div class="field">
+<label for="email">Email *</label>
+<input id="email" name="email" type="email" required autocomplete="email">
+</div>
+
+<fieldset class="field">
+<legend>What interests you most?</legend>
+<div class="choice-group">
+<label class="check"><input type="checkbox" name="topic" value="characters"><span>Character analysis</span></label>
+<label class="check"><input type="checkbox" name="topic" value="history"><span>Historical context</span></label>
+<label class="check"><input type="checkbox" name="topic" value="feminist"><span>Feminist readings</span></label>
+</div>
+</fieldset>
+
+<fieldset class="field">
+<legend>Meeting time (online) *</legend>
+<div class="choice-group">
+<label class="radio"><input type="radio" name="slot" value="fri" required><span>Friday evening</span></label>
+<label class="radio"><input type="radio" name="slot" value="sat"><span>Saturday afternoon</span></label>
+</div>
+</fieldset>
+
+<div class="field">
+<label for="region">Region *</label>
+<select id="region" name="region" required>
+<option value="" disabled selected>Select one</option>
+<option>South Asia</option>
+<option>Middle East</option>
+<option>Europe</option>
+<option>North America</option>
+<option>Other</option>
+</select>
+</div>
+
+<div class="field wide">
+<label for="notes">Notes</label>
+<textarea id="notes" name="notes" rows="4" placeholder="Any accessibility needs or questions?"></textarea>
+</div>
+</div>
+
+<button class="btn" type="submit">Submit</button>
+</form>
+
+<!-- CSS-only success view -->
+<div id="thanks" class="thanks" role="region" aria-live="polite" tabindex="-1">
+<h3>Thanks! </h3>
+<p>You’re on the list for our reading circle. (Demo only — HTML/CSS, no data sent.)</p>
+<a class="btn ghost" href="#join">Back to form</a>
+</div>
+</section>
+</main>
+
+<footer class="site-footer">
+<small>&copy; 2025 Reading Circle — HTML + CSS only.</small>
+</footer>
+</div>
+</body>
+</html>
+
+    </body>
+</html>
